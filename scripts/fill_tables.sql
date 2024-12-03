@@ -85,7 +85,8 @@ with db_tablespaces as (
 )
 select
     t.spcname as Tablespace,
-    COALESCE(string_agg(distinct c.relname, E'\n'), 'No objects') as Objects
+    COALESCE(string_agg(distinct c.relname, E'\n'), 'No objects') as Objects,
+    db.datname
 from
     pg_tablespace t
         left join
@@ -93,6 +94,6 @@ from
         left join
     db_tablespaces db on t.spcname = db.spcname
 group by
-    t.spcname
+    t.spcname, db.datname
 order by
     t.spcname;

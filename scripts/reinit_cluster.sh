@@ -1,2 +1,2 @@
-./delete_cluster.sh
-./init_cluster.sh
+./tmp/delete_cluster.sh
+./tmp/init_cluster.sh
