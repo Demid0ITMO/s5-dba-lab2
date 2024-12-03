@@ -1,0 +1,8 @@
+export PGDATA=$HOME/hgv34
+export WALDIR=$HOME/rrx19
+export TEMPTBSPC1=$HOME/swm74
+export TEMPTBSPC2=$HOME/qva60
+
+pg_ctl stop
+
+rm -rf $PGDATA $WALDIR $TEMPTBSPC1 $TEMPTBSPC2
