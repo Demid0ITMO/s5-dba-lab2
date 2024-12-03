@@ -99,14 +99,15 @@ postgresql.conf:
 - [log_connections](https://postgrespro.ru/docs/postgresql/16/runtime-config-logging#GUC-LOG-CONNECTIONS) = on
 - [log_disconnections](https://postgrespro.ru/docs/postgresql/16/runtime-config-logging#GUC-LOG-DISCONNECTIONS) = on
 - [log_filename](https://postgrespro.ru/docs/postgresql/16/runtime-config-logging#GUC-LOG-FILENAME) = 'postgresql-%Y-%m-%d_%H%M%S.log'
-- [max_connections](https://postgrespro.ru/docs/postgresql/16/runtime-config-connection#GUC-MAX-CONNECTIONS) = 200
-- [shared_buffers](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-SHARED-BUFFERS) = ОЗУ / 4 = 1GB
-- [temp_buffers](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-TEMP-BUFFERS) = 32MB
-- [work_mem](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-WORK-MEM) = 64MB
-- [checkpoint_timeout](https://postgrespro.ru/docs/postgresql/16/runtime-config-wal#GUC-CHECKPOINT-TIMEOUT) = 30s
-- [effective_cache_size](https://postgrespro.ru/docs/postgresql/16/runtime-config-query#GUC-EFFECTIVE-CACHE-SIZE) = 8GB
+- [max_connections](https://postgrespro.ru/docs/postgresql/16/runtime-config-connection#GUC-MAX-CONNECTIONS) = 1500
+- [max_prepared_transactions](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-MAX-PREPARED-TRANSACTIONS) = 1500
+- [shared_buffers](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-SHARED-BUFFERS) = 2GB
+- [temp_buffers](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-TEMP-BUFFERS) = 48MB
+- [work_mem](https://postgrespro.ru/docs/postgresql/16/runtime-config-resource#GUC-WORK-MEM) = 48MB
+- [checkpoint_timeout](https://postgrespro.ru/docs/postgresql/16/runtime-config-wal#GUC-CHECKPOINT-TIMEOUT) = 5min
+- [effective_cache_size](https://postgrespro.ru/docs/postgresql/16/runtime-config-query#GUC-EFFECTIVE-CACHE-SIZE) = 2GB
 - [fsync](https://postgrespro.ru/docs/postgresql/16/runtime-config-wal#GUC-FSYNC) = on
-- [commit_delay](https://postgrespro.ru/docs/postgresql/16/runtime-config-wal#GUC-COMMIT-DELAY) = 5
+- [commit_delay](https://postgrespro.ru/docs/postgresql/16/runtime-config-wal#GUC-COMMIT-DELAY) = 50
 - [temp_tablespaces](https://postgrespro.ru/docs/postgresql/16/runtime-config-client#GUC-TEMP-TABLESPACES) = 'qva60, swm74'
 - [password_encryption](https://postgrespro.ru/docs/postgresql/16/runtime-config-connection#GUC-PASSWORD-ENCRYPTION) = md5
 
